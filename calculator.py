@@ -1,15 +1,12 @@
 print("Простой калькулятор")
-print("Доступные операции: +, -, *, /, square")
+print("Доступные операции: +, -, *, /, square, cube")
 
-# ввод чисел
 a = float(input("Введите первое число: "))
-op = input("Введите операцию (+, -, *, /, square): ")
+op = input("Введите операцию (+, -, *, /, square, cube): ")
 
-# для операций с двумя числами
 if op in ["+", "-", "*", "/"]:
     b = float(input("Введите второе число: "))
 
-# выполнение
 if op == "+":
     result = a + b
 elif op == "-":
@@ -17,12 +14,11 @@ elif op == "-":
 elif op == "*":
     result = a * b
 elif op == "/":
-    if b == 0:
-        result = "Ошибка: деление на ноль!"
-    else:
-        result = a / b
+    result = "Ошибка: деление на ноль!" if b == 0 else a / b
 elif op == "square":
     result = a ** 2
+elif op == "cube":
+    result = a ** 3
 else:
     result = "Неизвестная операция!"
 
