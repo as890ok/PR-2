@@ -1,12 +1,12 @@
 print("Простой калькулятор")
-print("Доступные операции: +, -, *, /, square, power")
+print("Доступные операции: +, -, *, /, square")
 
 # ввод чисел
 a = float(input("Введите первое число: "))
-op = input("Введите операцию (+, -, *, /, square, power): ")
+op = input("Введите операцию (+, -, *, /, square): ")
 
 # для операций с двумя числами
-if op in ["+", "-", "*", "/", "power"]:
+if op in ["+", "-", "*", "/"]:
     b = float(input("Введите второе число: "))
 
 # выполнение
@@ -23,8 +23,6 @@ elif op == "/":
         result = a / b
 elif op == "square":
     result = a ** 2
-elif op == "power":
-    result = a ** b
 else:
     result = "Неизвестная операция!"
 
