@@ -10,6 +10,11 @@ class TestCalculator(unittest.TestCase):
         a = 4
         result = a ** 2
         self.assertEqual(result, 16)
+    
+    def test_cube(self):
+        a = 3
+        result = a ** 3
+        self.assertEqual(result, 27) 
 
 if __name__ == '__main__':
     unittest.main()
