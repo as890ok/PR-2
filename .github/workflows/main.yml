@@ -35,6 +35,10 @@ jobs:
         mkdir -p docs/output
         pdoc --html --output-dir docs/output calculator.py
 
+    - name: index.html for GitHub Pages
+      run: |
+        echo '<meta http-equiv="refresh" content="0; url=calculator.html">' > docs/output/index.html
+
     - name: Upload documentation artifact
       uses: peaceiris/actions-gh-pages@v4
       with:
