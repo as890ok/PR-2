@@ -25,16 +25,18 @@ jobs:
         pip install pdoc
 
     - name: Run syntax check
-      run: |
-        python -m py_compile calculator.py
+      run: python -m py_compile calculator.py
 
     - name: Run tests
-      run: |
-        python -m unittest discover -s tests
+      run: python -m unittest discover -s tests
 
     - name: Generate documentation
       run: |
         mkdir -p docs/html
-        pdoc --output-dir docs/html calculator.py
+        pdoc --html calculator.py -o docs/html --force
 
-
+    - name: Upload documentation artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: documentation
+        path: docs/html/calculator/
