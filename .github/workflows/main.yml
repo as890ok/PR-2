@@ -30,9 +30,5 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover -s tests
-    - name: Build Documentation
-      run: |
-        echo "Генерация документации"
-        mkdir -p docs/_build
-        cp docs/README.md docs/_build/
+
 
