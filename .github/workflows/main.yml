@@ -31,10 +31,10 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover -s tests
-        
+
     - name: Generate documentation
       run: |
         mkdir -p docs/html
-        pdoc --html calculator.py -o docs/html --force
+        pdoc --output-dir docs/html calculator.py
 
 
