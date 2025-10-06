@@ -32,11 +32,11 @@ jobs:
 
     - name: Generate documentation
       run: |
-        mkdir -p docs/html
-        pdoc --html calculator.py -o docs/html --force
+        mkdir -p docs/output
+        pdoc --html --output-dir docs/output calculator.py
 
     - name: Upload documentation artifact
-      uses: actions/upload-artifact@v4
+      uses: peaceiris/actions-gh-pages@v4
       with:
-        name: documentation
-        path: docs/html/calculator/
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/output 
