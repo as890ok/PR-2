@@ -22,6 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install pdoc
 
     - name: Run syntax check
       run: |
@@ -30,5 +31,10 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover -s tests
+        
+    - name: Generate documentation
+      run: |
+        mkdir -p docs/html
+        pdoc --html calculator.py -o docs/html --force
 
 
