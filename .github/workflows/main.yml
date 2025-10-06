@@ -33,7 +33,7 @@ jobs:
     - name: Generate documentation
       run: |
         mkdir -p docs/html
-        pdoc --output-directory docs/html calculator.py
+        pdoc --html calculator.py -o docs/html --force
 
     - name: Upload documentation artifact
       uses: actions/upload-artifact@v4
