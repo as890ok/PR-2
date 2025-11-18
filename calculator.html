@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <meta name="generator" content="pdoc3 0.11.6">
 <title>calculator API documentation</title>
-<meta name="description" content="Простой калькулятор для выполнения базовых математических операций …">
+<meta name="description" content="Программа калькулятора, предназначенная для выполнения математических операций.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
@@ -36,19 +36,7 @@ el.replaceWith(d);
 <h1 class="title">Module <code>calculator</code></h1>
 </header>
 <section id="section-intro">
-<p>Простой калькулятор для выполнения базовых математических операций.</p>
-<p>Поддерживаемые операции:
-- Сложение (+)
-- Вычитание (-)
-- Умножение (*)
-- Деление (/)
-- Возведение в квадрат (square)
-- Возведение в куб (cube)</p>
-<p>Пример использования:
-Введите первое число: 5
-Введите операцию: +
-Введите второе число: 3
-Результат: 8.0</p>
+<p>Программа калькулятора, предназначенная для выполнения математических операций.</p>
 </section>
 <section>
 </section>
@@ -66,10 +54,9 @@ el.replaceWith(d);
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def add(a: float, b: float) -&gt; float:
-    &#34;&#34;&#34;Сложение двух чисел.&#34;&#34;&#34;
     return a + b</code></pre>
 </details>
-<div class="desc"><p>Сложение двух чисел.</p></div>
+<div class="desc"></div>
 </dd>
 <dt id="calculator.cube"><code class="name flex">
 <span>def <span class="ident">cube</span></span>(<span>a: float) ‑> float</span>
@@ -80,10 +67,9 @@ el.replaceWith(d);
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def cube(a: float) -&gt; float:
-    &#34;&#34;&#34;Возведение числа в куб.&#34;&#34;&#34;
     return a ** 3</code></pre>
 </details>
-<div class="desc"><p>Возведение числа в куб.</p></div>
+<div class="desc"></div>
 </dd>
 <dt id="calculator.divide"><code class="name flex">
 <span>def <span class="ident">divide</span></span>(<span>a: float, b: float) ‑> str | float</span>
@@ -94,10 +80,9 @@ el.replaceWith(d);
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def divide(a: float, b: float) -&gt; str | float:
-    &#34;&#34;&#34;Деление первого числа на второе. Возвращает ошибку при делении на ноль.&#34;&#34;&#34;
     return &#34;Ошибка: деление на ноль!&#34; if b == 0 else a / b</code></pre>
 </details>
-<div class="desc"><p>Деление первого числа на второе. Возвращает ошибку при делении на ноль.</p></div>
+<div class="desc"></div>
 </dd>
 <dt id="calculator.multiply"><code class="name flex">
 <span>def <span class="ident">multiply</span></span>(<span>a: float, b: float) ‑> float</span>
@@ -108,10 +93,9 @@ el.replaceWith(d);
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def multiply(a: float, b: float) -&gt; float:
-    &#34;&#34;&#34;Умножение двух чисел.&#34;&#34;&#34;
     return a * b</code></pre>
 </details>
-<div class="desc"><p>Умножение двух чисел.</p></div>
+<div class="desc"></div>
 </dd>
 <dt id="calculator.square"><code class="name flex">
 <span>def <span class="ident">square</span></span>(<span>a: float) ‑> float</span>
@@ -122,10 +106,9 @@ el.replaceWith(d);
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def square(a: float) -&gt; float:
-    &#34;&#34;&#34;Возведение числа в квадрат.&#34;&#34;&#34;
     return a ** 2</code></pre>
 </details>
-<div class="desc"><p>Возведение числа в квадрат.</p></div>
+<div class="desc"></div>
 </dd>
 <dt id="calculator.subtract"><code class="name flex">
 <span>def <span class="ident">subtract</span></span>(<span>a: float, b: float) ‑> float</span>
@@ -136,10 +119,9 @@ el.replaceWith(d);
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def subtract(a: float, b: float) -&gt; float:
-    &#34;&#34;&#34;Вычитание второго числа из первого.&#34;&#34;&#34;
     return a - b</code></pre>
 </details>
-<div class="desc"><p>Вычитание второго числа из первого.</p></div>
+<div class="desc"></div>
 </dd>
 </dl>
 </section>
