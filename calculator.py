@@ -1,46 +1,28 @@
 """
 Программа калькулятора, предназначенная для выполнения математических операций.
 """
-def add(a: float, b: float) -> float:
-    return a + b
+print("Простой калькулятор")
+print("Доступные операции: +, -, *, /, square, cube")
 
-def subtract(a: float, b: float) -> float:
-    return a - b
+a = float(input("Введите первое число: "))
+op = input("Введите операцию (+, -, *, /, square, cube): ")
 
-def multiply(a: float, b: float) -> float:
-    return a * b
+if op in ["+", "-", "*", "/"]:
+    b = float(input("Введите второе число: "))
 
-def divide(a: float, b: float) -> str | float:
-    return "Ошибка: деление на ноль!" if b == 0 else a / b
+if op == "+":
+    result = a + b
+elif op == "-":
+    result = a - b
+elif op == "*":
+    result = a * b
+elif op == "/":
+    result = "Ошибка: деление на ноль!" if b == 0 else a / b
+elif op == "square":
+    result = a ** 2
+elif op == "cube":
+    result = a ** 3
+else:
+    result = "Неизвестная операция!"
 
-def square(a: float) -> float:
-    return a ** 2
-
-def cube(a: float) -> float:
-    return a ** 3
-
-if __name__ == "__main__":
-    print("Простой калькулятор")
-    print("Доступные операции: +, -, *, /, square, cube")
-
-    a = float(input("Введите первое число: "))
-    op = input("Введите операцию (+, -, *, /, square, cube): ")
-
-    if op in ["+", "-", "*", "/"]:
-        b = float(input("Введите второе число: "))
-        if op == "+":
-            result = add(a, b)
-        elif op == "-":
-            result = subtract(a, b)
-        elif op == "*":
-            result = multiply(a, b)
-        elif op == "/":
-            result = divide(a, b)
-    elif op == "square":
-        result = square(a)
-    elif op == "cube":
-        result = cube(a)
-    else:
-        result = "Неизвестная операция!"
-
-    print("Результат:", result)
+print("Результат:", result)
